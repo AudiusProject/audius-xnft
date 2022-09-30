@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "xnft build",
+    "start": "xnft watch",
+    "dev": "xnft dev"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/AudiusProject/audius-xnft/issues"
   },
-  "homepage": "https://github.com/AudiusProject/audius-xnft#readme"
+  "homepage": "https://github.com/AudiusProject/audius-xnft#readme",
+  "dependencies": {
+    "@coral-xyz/xnft-cli": "0.1.0-latest.2415",
+    "react": "^17.0.2",
+    "react-xnft": "0.1.0-latest.2415"
+  }
 }
