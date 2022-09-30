@@ -20,7 +20,7 @@ export function App() {
       }}
     >
       <Iframe
-        src="https://audius.co/embed/playlist/DOPRl?flavor=card"
+        src="https://audius.co/embed/playlist/DOPRl?flavor=card&fillContainer=true"
         style={{
           position: "relative",
           flex: 1,
