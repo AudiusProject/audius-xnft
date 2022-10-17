@@ -21,7 +21,6 @@ export function App() {
     if (connection) {
       const work = async () => {
         const tokenAccounts = await connection.getTokenAccountsByOwner(publicKey, { mint: AUDIO_MINT_PUBLIC_KEY })
-        console.log({tokenAccounts})
         const wAudioTokenAccountPubkey = tokenAccounts?.value?.[0]?.pubkey ?? undefined
         if (wAudioTokenAccountPubkey) {
           const tokenAccountBalance = await connection.getTokenAccountBalance(wAudioTokenAccountPubkey)
@@ -52,28 +51,26 @@ export function App() {
       }}
     >
       {
-        isHodler === false
-            ? (
-              <View
+        isHodler === false &&
+          <View
+            style={{
+              position: "absolute",
+              zIndex: 10
+            }}
+            >
+              <Image
                 style={{
-                  position: "absolute",
-                  zIndex: 10
+                  width: 200,
+                  height: 200,
                 }}
-                >
-                  <Image
-                    style={{
-                      width: 200,
-                      height: 200,
-                    }}
-                    src={HODL_TO_UNLOCK}
-                  />
-              </View>
-        ) : null
+                src={HODL_TO_UNLOCK}
+              />
+          </View>
       }
       <View
         style={{
           backgroundColor: "white",
-          opacity: isHodler ? 0 : 0.2,
+          opacity: isHodler ? 1 : 0.2,
           height: "100%",
           width: "100%",
           display: "flex",
