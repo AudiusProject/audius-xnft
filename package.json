@@ -18,9 +18,11 @@
     "url": "https://github.com/AudiusProject/audius-xnft/issues"
   },
   "homepage": "https://github.com/AudiusProject/audius-xnft#readme",
+  "devDependencies": {
+    "@coral-xyz/xnft-cli": "latest"
+  },
   "dependencies": {
-    "@coral-xyz/xnft-cli": "0.1.0-latest.2415",
     "react": "^17.0.2",
-    "react-xnft": "0.1.0-latest.2415"
+    "react-xnft": "latest"
   }
 }
