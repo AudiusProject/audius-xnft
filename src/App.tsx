@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import ReactXnft, { Iframe, useConnection, usePublicKey, View, Text } from "react-xnft";
+import ReactXnft, { Iframe, useConnection, usePublicKey, View, Image } from "react-xnft";
 import { PublicKey } from '@solana/web3.js'
 import BN from 'bn.js'
+import { HODL_TO_UNLOCK } from "./Constants"
 
 const AUDIO_MINT_PUBLIC_KEY = new PublicKey('9LzCMqDgTKYz9Drzqnpgee3SGa89up3a247ypMj2xrqM')
 
@@ -55,16 +56,17 @@ export function App() {
             ? (
               <View
                 style={{
-                  position: "absolute"
+                  position: "absolute",
+                  zIndex: 10
                 }}
                 >
-              <Text
-                style={{
-                  color: "#9147CC"
-                }}
-              >
-                Hodl $AUDIO to unlock!
-              </Text>
+                  <Image
+                    style={{
+                      width: 200,
+                      height: 200,
+                    }}
+                    src={HODL_TO_UNLOCK}
+                  />
               </View>
         ) : null
       }
